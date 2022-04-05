@@ -6,12 +6,11 @@ require('colors');
 
 const main = async() => {
 
-    console.log('Hola mundo');
-
     let opt = '';
     const tareas = new Tareas();
 
     do {
+        //imprimir menu
         opt = await inquirerMenu();
 
         switch (opt) {
@@ -21,7 +20,7 @@ const main = async() => {
             break;
 
             case '2':
-                console.log(tareas._listado);
+                console.log(tareas.listadoArr);
             break;
 
             case '3':
