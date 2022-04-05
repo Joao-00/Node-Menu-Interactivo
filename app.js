@@ -1,3 +1,4 @@
+const { guardarDB } = require('./helpers/guardarArchivo');
 const { inquirerMenu, pausa, leerInput } = require('./helpers/inquirer');
 const Tarea = require('./models/tarea');
 const Tareas = require('./models/tareas');
@@ -39,6 +40,8 @@ const main = async() => {
                 
             break;
         }
+
+        guardarDB(tareas.listadoArr);
 
 
         await pausa();

@@ -8,6 +8,7 @@ class Tareas {
 
     _listado = {};
 
+    //para listar las tareas
     get listadoArr() {
         const listado = [];
         Object.keys(this._listado).forEach(key => {
